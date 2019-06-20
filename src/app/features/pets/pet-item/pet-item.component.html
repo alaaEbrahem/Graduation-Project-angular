@@ -1,0 +1,15 @@
+<div class="card">
+  <div class="container-of-image ">
+    <img src="{{pet.image}}" alt="Avatar" class="image" />
+    <!-- <div [ngStyle]="{'background-image':'url('+pet.image +')'}" class="image"></div> -->
+    <div class="overlay"></div>
+  </div>
+  <div class="card-body text-center">
+    <h3 class="add-Green add-Bold">{{pet.name}}</h3>
+    <h4>{{pet.gender}}</h4>
+    <!-- , {{pet.category.type}} -->
+    <h4 *ngIf= "pet.category.name">     {{pet.category.name}}</h4>
+    <a class="show" [routerLink]="['/pet-profile']"><i class="fa fa-eye "></i></a>
+    <a class="edit" href="#"><i class="fa fa-edit "></i></a>
+  </div>
+</div>
